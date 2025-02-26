@@ -1,8 +1,10 @@
 import express from 'express';
 import createUser from './function/create_user';
 import getUserById from './function/get_user';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
